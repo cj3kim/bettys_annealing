@@ -1,8 +1,4 @@
-
-
-
-define(['d3'], function (d3) {
-
+define([], function (d3) {
   function betty()  {
     var beta = 0.1;
     var subtractor = 0.0001;
@@ -17,16 +13,12 @@ define(['d3'], function (d3) {
     this.beta = function () {
       if (arguments.length > 0) {
         var _beta = arguments[0];
-        if (_beta < 0.1) {
-          beta = _beta;
-        } else {
-          beta = 0.1;
-        }
-      } 
+        _beta < 0.1 ? beta = _beta : beta = 0.1 ;
+
+      }
       return beta;
     };
-
   }
 
   return betty;
-})
+});
